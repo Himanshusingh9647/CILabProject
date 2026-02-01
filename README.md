@@ -12,12 +12,20 @@ This project demonstrates a complete Continuous Integration (CI) workflow using 
 ```text
 CILabProject/
 ├── src/
-│   ├── main/java/com/muj/ci/Calculator.java    # Source Code
-│   └── test/java/com/muj/ci/CalculatorTest.java # Unit Tests
-├── pom.xml                                      # Maven Configuration
-├── Jenkinsfile                                  # Pipeline Logic
+│   ├── main/
+│   │   ├── java/com/muj/ci/Calculator.java         # Source Code
+│   │   └── resources/                             # (empty or config files)
+│   └── test/
+│       └── java/com/muj/ci/CalculatorTest.java    # Unit Tests
+├── pom.xml                                        # Maven Configuration
+├── Jenkinsfile                                    # Pipeline Logic
+├── docker/
+│   └── Dockerfile                                 # Docker build file
 ├── scripts/
-│   ├── check_env.py                             # Sanity check script
-│   └── deploy.sh                                # Dummy deployment script
-└── documentation/                               # Guides and Reports
+│   ├── build.sh                                   # Build script (Linux/macOS)
+│   ├── build.bat                                  # Build script (Windows)
+│   └── deploy.sh                                  # Deployment script
+├── target/                                        # Build output (generated)
+│   └── ...
+└── README.md                                      # Project Overview (this file)
 ```
